@@ -1029,14 +1029,14 @@ body {
         z-index: 1;
         width: 245px;
         margin-top: 8px;
-        height: 78vh;
+        height: 70vh;
         transition: left 0.3s ease;
     }
 
     .right-box {
         width: 100vw;
         margin-top: 8px;
-        height: 72vh;
+        height: 70vh;
     }
 
     .leftplaylists {
