@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player : Music for everyone </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="nav flex">
+        <img src="images/logo.svg" alt="Logo" class="logo hamburger" />
+        <div class="home">
+            <img src="images/home.svg" alt="">
+        </div>
+        <div class="search-container flex">
+            <img src="images/search.svg" alt="Icon" class="searchsvg">
+            <input type="text" placeholder="What do you want to play?" class="search-input" />
+
+        </div>
+
+        <div class="nav-links flex">
+            <div class="extra">
+                <div class="navcircle">
+                    <img src="images/download.svg" alt="">
+                </div>
+            </div>
+            <a href="https://www.spotify.com/us/download/android/">Install app</a>
+
+        </div>
+
+        <!-- <div class="line"></div>
+
+        <div class="nav-links2 flex">
+
+            <a href=" ">Install App</a>
+            <a href=" ">Sign up</a>
+        </div>
+
+        <button class="login-btn">Log in</button> -->
+
+
+
+    </div>
+    <div class="container flex">
+        <div class="left-box justify-content align-items">
+            <div class="library ">
+                <div class="heading flex">
+                    <h2>Your Library</h2>
+                    <span><img src="images/plus.svg" alt="" class="plus"></span>
+                </div>
+                <div class="filters flex ">
+                    <button>Playlists</button>
+                    <button>Albums</button>
+                    <button>Artists</button>
+                </div>
+                <div class="leftplaylists">
+                    <div class="playlistcard liked flex tappable-card" data-folder="liked">
+                        <img src="	https://misc.scdn.co/liked-songs/liked-songs-300.jpg" alt="">
+                        <div class="playlistsonginfo">
+                            <h2>Liked songs </h2>
+                            <span>Playlist - Ayush kumar</span>
+                        </div>
+                    </div>
+                    <div class="playlistcard blend flex tappable-card" data-folder="blend">
+                        <img src="https://blend-playlist-covers.spotifycdn.com/v2/blend_DEFAULT-royal-aqua-en.jpg"
+                            alt="">
+                        <div class="playlistsonginfo">
+                            <h2>Rupesh + Ayush </h2>
+                            <span>Playlist - Spotify</span>
+                        </div>
+                    </div>
+                    <div class="playlistcard  afsos flex tappable-card" data-folder="afsos">
+                        <img src="https://i.scdn.co/image/ab67616d00001e028537cf974af2c408bdd8e1a6" alt="">
+                        <div class="playlistsonginfo">
+                            <h2>Afsos </h2>
+                            <span>Single - Anuv Jain</span>
+                        </div>
+                    </div>
+                    <div class="playlistcard black  flex tappable-card" data-folder="black">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02c027ad28821777b00dcaa888" alt="">
+                        <div class="playlistsonginfo">
+                            <h2>Black Panther</h2>
+                            <span>Playlist - kendrick & SZA</span>
+                        </div>
+                    </div>
+                    <div class="playlistcard artist anuv flex tappable-card" data-folder="anuv">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAMAAzAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAABAAIDBAUHBgj/xAA3EAABAwIEAwUHAwQDAQAAAAABAAIDBBEFEiExBkFREyJhccEUIzIzcoGRQqHRBySx4VJi8ML/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A5MikkgSSKSAJIoICkkkgIRQRQJJJJAkkkkBQRQQJAooFAEUkUASSSQJJJJA0rSww2hff/n6BZrhqtHD/AJT/AK/QIM5JJFAkkkkCSRSsgCSJ0SseiBIpJBArJWRSQBFJJAkkkkAQSSQEJJBFA0o8kkrIAkiggad1o4d8p/1+gWeVoYf8t/1+gQZwRSSQFJJJAgpoqd8rHPaCWtNiRrZRNsNyFLDUupntEbi5u727AoLIpYmEZ3OGnM7FBkUYMjcxvbu6c1YZHFUOz2kOmYMsdB1uFRnqXOe6KFxsN3OAB/lAxwANg4O+pWBRlwIaQ14F8pGp8lTc3va3L28grdLXWdG2VlpWu+aTctCCqQUgtLG4WRvjla5pEnL1WcgCSKSBIIoIAiAgQiEBQRSQNsnDxQRQB1k1EoIAVoYf8t/1+gWeVo4f8t/1+gQZySSSApJJIJYdtmm/d7wUUjXvlAkblzG3d2KmglbFo5mdt72V1kDJrTsjADe9bZBVa6RtRkBJe3utFyBZSYi10DWRNYwB4vZrLfunUsbn1Que8TyWlW0rpJ4o6eCTNlsXyOFv2QUYOwYGMveZzbONrhqq1ENqZsjm95jrDxHJTVMXstUBFKC4A3uE6COasikLsotYNFkEFY50zYHvI0FrKBOIte515IIEgiggSCKCApJBFAEkkECRSSQApqcdk1ACtHD/AJb/AK/QLOK0MPF4n2/5+gQZ6KSSBI2SCcgMMT5pMkTS53QLdw2DtaMRSOMbRfP1CHB+BVuNYg8UmVkcTSZZnnRg/la1ZhE9LNJZznwk37ZjCGj7lBiSezQzNMVIOzP63PK9DhtTJXNbFQ0naSsaSWjkAqLaY5SxoabHde1/p5SwYfI6pqniN7z3WnmEHPpqqonqCaZjWEOsR2ey1MNhdVzsLoxnDrFzW2uF6bFMBop8WmlonMyPdclu1+anldBhlEY2xNzW+JB4mowWjidiAnErpS+9PldZrNLi453K8sV0IQTSYdiOKyv90YXNAt8Ltgb8zsLLwMlPJHc2Jb1QRpIgGyCBJWS5pIEkiggSFkUigCSSSAHZNKcmlAlo4Z8l/wBfoFnclo4Z8l/1+gQZyKSVkCRQsig6v/TeSip+HjC139xUvvI46fb7KXiqmqcW4pw/CmdpFQOju5zdGkDcDxXg+FcQbBK+mnkytdqwZd3dN9F7aXGTLhzI3x9pJE4OjfezmjnbqgzMZpabDcfdSUTpBGGguzOzXv5qo2unp6kSStJcwZWkNOy9JWYWOIaRlVRyhmIwMsGHuiUfyvJmmiuRLV1LJmnLJHISC09EHp+Ee7T1c1TIw9obxtuLjqbKtjcvayZQTZZ8MNLFaSMuzgae9dbzIvZNmke5hfa469UFVsON45SYjQYbK3sMNjNW6DnK3p1J3NvBebhq2zRF7GkFpAd0XQeCHyYPxZT1IaZBU072lm2aw2/Nl47iSKjg4iroaGEQ0xkJbG39AOtvsTby0QVmuz203QJZsW/sqcNSI5HRyXA5HopX1LXXLTdw6IJezhcPhHT4Sm+zQuuALfdMFQBY2u23JPMoc0OYNOaCKSlI+A3VdwLTZwsVeEgtoe8dkx0kT7teQHc7oKfNIqeSAjVmvgFC7Q2/PggagidEEC5IFEoIBZaOGD3D/r9As9aOGH3Dvr9AgzkboIIHJDVCxThogfG4xPEgfke03Gi9FhOPRVTxFK0RzDW19HeS8lK53W6rtJvmBsb7hB1mgxAwuaYzaxvotPG2xYnEK6MMdVsbZ9xrI3p/C5bh2OTQtDJw6QjYjcL2eC18lZEHtuwN5lBFHJHM4tbGWkaZSOfRXJI29mO0cGsG4usl+IwtxCoyPsWusQRur/DVPJxJxBT0Lh/axkSVB6tHL7lB7jDMKbR8NNxqZoZLLcxad4MIIFr7E3J8rdFyTihnYY699x/cNEthuOXou5cY1LJmQ4ZTgXjGoGwJ0C4VxwHR8S1DNzCGxgDlpf1QZtTAJRn2J3UZjfGx2R1zZTUzyQGSaOOwKLnNAPVBWzZLAG7dCClTyljnRg6HVMeLvyt5G4CifcSg7ILUzr2IJ0TpsssbQbX5FVw64IUsLw5tiED6Spcw5JD5K49jJW3fYX2ss6oivZ7fiCmo6jN3H7jZAJIXMuRq1RrQzHf9lG+JsgvYNd4IKaFlI5ha6xCaQgbZaOGD3Dvr9As9aGGfId9foEGdZGySSBKQt91odQdUxurgOqErslntPcvld5oK86hjjc9wa0XKlmOZWcPsGm2h6oJqeBkI11d1K0MNxSbD3loJfA496MnT7KnKo2nqgsxyuqZJhVd0hxfDJzA6FdK4ItgeCdvHGDW1TcznH9I5LlRnMfwaf4XU+BKibiWF7n05hjgs0vHwONtgg3MJzT1jS+7iXblcexyp9uxyuqnm4mqXuv4XP+l2J2TDoKqVjrughkfp1DSuGvfZmc7WQWGRttfNd4OhKZNFdxd12VHtX5819eSk9oe4WJQSyi1jcCygqLFtwdQo3El13Ep1rtd47IGg7J8Zs8KIG4CcCgvx2t3lWlAbIHN5Jxf3BZN3bqguRuuGlWGkKlA/YFW2bbhAXtzC5toqUos5XS5o0LgFFI0OBy2d5IKnIrQw35L/AK/QKg7a42V/Dfkv+v0CDPCSICCAt0cD0VWdr4JHc2OOithCS9rWuPFBRc+/L7KxSkslAdppsopI+gsnlxc6N532JQaGYc1G5wUeYpjieSCSCN1ZVw08V80sjWAjlc7/AG3XeMHp4cJw+CioWGGKEW7upceZv4rlHCmHyWbXvaB2rssdxy6/ldbgeJadneyPsLC19bahBDxjRRx8NYpXxukLH07gWNFy1x6lcDqCSGsvpa/8LtHF9RJFw7VwvlcO2hMbuQJBB1C4m85nE+KBuylazQFRWurMLhlItsgie1BpykKV2vJRuGlxYoInizyPG6IQm/S77FAG4QSsKlHw3KrtOqke8kABpCAuky7Jhnef1JpY5yjLCCgc57juT+U6OZzSC02KMbC7QNcT5KZtM7d0RKCUESC7djv4K7hp9y/6/QKoyNsdg0EX6q9hwyxPH/c/4CDORSASQEJ3da3M82HNNCjcDM4tvZjTqgkyZo8+Wwvp4qtK2zfJ11aLzlAboAoJvgPigI+G6McRnnjhbvI4N/KY09xSUdR7NWQTnXs3goOsYXRxvpIGxgMfBlD4x06jwXo6Dd8XMfsCsOGlNbRRV2HHvkA2b6KSkxE+0NZNeOQ9119iUFnjSlM/C9e17O9HHnzjc5f9XXCm87rv9YwVdLJTvcLSxuafIhcGqIXU1TJDICHxuLHA8iNEEVkWkgpIkaFBNFDJM/LELkbk7BWvY4qdj3TOzPI56NB8FXoqqaB73Q2JczLldsq9TJLI8vncSTzd6IIyPiB5jdRNO4TwdddeiYW96/JA9h7wvstM09O2ka9rp3SCTISSMm19LLJceXJakLgaFtgR77/5QAADkqL2ntXtJ0utAKs/s45nOkbd3K6CSmziwZchWHTFgsb381SdLK4aNIb4bJRSu2zIJo3F8oJv91q0Dfdv+v0CyYycwuVp0Fuzf9foEGaikkgVk0d1pA0vunqGR1/DzQOjcOxN9wo5DcWTWnvFp2ScgV+7ZRuKeSmEoPV8GcZVmATsikvPQndt+8zxHgui41WYdi9NBiGHNMhePedk25uOttlw1htq1aGHYvW4c8vpppInH4spsHeaDqVJjFV2zWVNLK5uzZAzUea8Rx1RhmLuq4h7uq750t3ra/z91tYBxY2vHs9U7sai3dN+69Q8UNdVUcoc25jOcHn5/hB4ZOHilKWxvyvJa618rhY+aaXAbX8kD2NIfmaVK1xkjLnNDm7W5hVC83sHWSa58YzNPxckFp0EULS+QgEi4aqMzgT3dk6bcEnMSNbqPITyQBupstOnJNDZ2uWUW/CzLW3ViCpdEx0ZHcc4OKC9ZQdtGyc9q2/j0U0bg5uZuqjlyl1wWuJGrSUFktu0EWLT0VFzAyTRWYDa7bWHIJtRC/4mi6BkRBPktOg+W/6/QLHgJLspBBWxh4tE/wCv0CDPRRASAQJBzA7dOsntZdBnztMe/wCU0vuy/Nahp2HdoPmFDLHHHoIw7yZdBn5r8whqVYMUcnwmx6bJphcDqDZBG2J52U9FRS1dVFAXxw53BvaTvysaTsXHkPFKIFvwuzeHMK3BK0nu6O5i9roIsawnEcBrjR4pTOpphq257rxycx3MeS9t/T3HIqjPR4jkkljacpe2/axnQj/3VLAeMxR4NV4HjcYq8Pnge2nL25nU78py26tvbyUHBfBkOOtmrGYzFhksM/Yt7SNrmvu0G4GdpBubaXCDpsWDYBW4X2VThcE8GrmAtva/iduY+yr4f/SfABPJI6kcaSdpaYZTmcwFuhY7dtj4rapaFnD9NS0M1UyoiEQBe5vxG9728/ErebiMZhfklj0acoDrOvyFjqg+XOLMAl4ex2vw0udI2nmyMc7dzDZzT+CPwVmzsy9m07AalbvG1ZUYhxdXyVJc14nyBhcCWtaLNF/LW3K/2WPUsb2mua4GjRzQRyNE5a1jCA0fF1UhpxYAvAt4J8McvZ5WZIx/2OYoup8ou6WRxPJosEDDRgt+IeF1D7HKToBa+91oYbTNq8QpoKkSMge8NeGv7xHnyXuMa4NgkxWhoeHYnwxhl6qXOXta3kST+o9EHPoqV8X6wOo6pkzBC4OYwW53F17vHOCK2jLH4UJK+Jws4HKJGH82I8tV5GaJwkfHIxzHtNnBw1Hmgqsf2z9DZ37KaVz44yHmx5KrPTuhJcw3b4ck1rny2aTc8roJIpB2zS8XPXotOikblkGuj+XkFnsYGjW11p4awGF5HN5/wEH/2Q=="
+                            alt="">
+                        <div class="playlistsonginfo">
+                            <h2>Anuv Jain</h2>
+                            <span>Artist</span>
+                        </div>
+                    </div>
+                    <div class="playlistcard artist ap flex tappable-card" data-folder="ap">
+                        <img src="https://i.scdn.co/image/ab6761610000e5ebfb505b37709fa86cfd8f55b3" alt="">
+                        <div class="playlistsonginfo">
+                            <h2>AP Dhillion</h2>
+                            <span>Artist</span>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="right-box  justify-content align-items">
+            <div class="trending-songs">
+                <h1 class="head">Trending songs</h1>
+                <div class="card-container flex ">
+                    <div class="card tappable-card" data-folder="trending1">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02931b61b7382db17ed15e75fc" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <h2>Maand</h2>
+                        <p>Bayaan,Hasan Raheem,<br> Rovalio</p>
+                    </div>
+                    <div class="card tappable-card" data-folder="trending2">
+                        <img src="https://i.scdn.co/image/ab67616d00001e0285c5968be0d0d9c545241124" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <h2>Pal Pal</h2>
+                        <p>Afusic, AliSoomroMusic</p>
+                    </div>
+                    <div class="card tappable-card" data-folder="trending3">
+                        <img src="	https://i.scdn.co/image/ab67616d00001e0283141000ee8ce3b893a0b425" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <h2>Finding Her </h2>
+                        <p>Kushagra,Bharath,<br> Saheal</p>
+                    </div>
+                    <div class="card tappable-card" data-folder="trending4">
+                        <img src="	https://i.scdn.co/image/ab67616d00001e021344800458a38197bfc721f3" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <h2>Jhol</h2>
+                        <p>Mannu, Annural khalid</p>
+                    </div>
+                    <div class="card tappable-card" data-folder="trending5">
+                        <img src="https://i.scdn.co/image/ab67616d00001e024c81f86297c2e3fac6a4c6cd" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <h2>2 Khatole(Lofi Mix)</h2>
+                        <p>Masoom Sharma</p>
+                    </div>
+                    <div class="card tappable-card" data-folder="trending6">
+                        <img src="https://i.scdn.co/image/ab67616d00001e0225202a8c5fd594b8e8ee2d5e" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <h2>Superstar</h2>
+                        <p>dox,JASKARAN,Rita <br>kim </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="trending-songs">
+                <h1 class="head">Albums featuring songs you like</h1>
+                <div class="card-container flex ">
+                    <div class="card tappable-card" data-folder="liked">
+                        <img src="https://i.scdn.co/image/ab67616d00001e0284a7049bbfc628dfd90870b9" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <h2>Blonde</h2>
+                        <p>Frank Ocean</p>
+                    </div>
+                    <div class="card tappable-card" data-folder="feature2">
+                        <img src="	https://i.scdn.co/image/ab67616d00001e02af8dee4d2b9da35cdfdda3d8" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <h2>Justice</h2>
+                        <p>Justin Bieber</p>
+                    </div>
+                    <div class="card tappable-card" data-folder="feature3">
+                        <img src="	https://i.scdn.co/image/ab67616d00001e02e1a81870181de556d515d4cc" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <h2>I Am Not A Human Being II (Deluxe) </h2>
+                        <p>Lil Wayne</p>
+                    </div>
+                    <div class="card tappable-card" data-folder="feature4">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02ba5db46f4b838ef6027e6f96" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <h2>÷(Deluxe)</h2>
+                        <p>Ed Sheeran</p>
+                    </div>
+                    <div class="card tappable-card" data-folder="feature5">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02dee7a044f4a9c4b3d835ae1a" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <h2>Jeremih</h2>
+                        <p>Jeremih</p>
+                    </div>
+                    <div class="card tappable-card" data-folder="feature6">
+                        <img src="https://i.scdn.co/image/ab67616d00001e022a86291a9d5a07620525d858" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <h2>Like him </h2>
+                        <p>Lewis Hanton </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="trending-songs last">
+                <h1 class="head">Best of artists</h1>
+                <div class="card-container flex ">
+                    <div class="card tappable-card" data-folder="artist1">
+                        <img src="https://i.scdn.co/image/ab67706f000000029cf2e21a96f217de5d3abf60" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+
+                        <p>This is the essential Justin Bieber.</p>
+                    </div>
+                    <div class="card tappable-card" data-folder="artist2">
+                        <img src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evNZVVBPG-default.jpg" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <p>This is Lana Del Rey.</p>
+                    </div>
+                    <div class="card tappable-card" data-folder="artist3">
+                        <img src="	https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO03DwPK-default.jpg" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <p>This is bruno Mars.</p>
+                    </div>
+                    <div class="card tappable-card" data-folder="artist4">
+                        <img src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO1n6IJz-default.jpg" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+
+                        <p>this is essential Atif Aslam.</p>
+                    </div>
+                    <div class="card tappable-card" data-folder="artist5">
+                        <img src="	https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evNZY5NHq-default.jpg" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+
+                        <p>This is Maroon 5. The essential tracks</p>
+                    </div>
+                    <div class="card tappable-card" data-folder="artist6">
+                        <img src="	https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO12tsHe-default.jpg" alt="">
+                        <div class="play-btn">
+                            <div class="circle3">
+                                <img src="images/play-solid.svg" alt="">
+                            </div>
+                        </div>
+
+                        <p>This is Cigarettes After Sex. The essentials.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer>
+                <div class="footer flex justify-content align-items">
+                    <div class="footer-container">
+                        <!-- First Column - About -->
+                        <div class="footer-column">
+                            <h3>Company</h3>
+                            <ul>
+                                <li><a href="https://www.spotify.com/in-en/about-us/contact/">About</a></li>
+                                <li><a href="https://www.lifeatspotify.com/">Jobs</a></li>
+                                <li><a href="https://newsroom.spotify.com/">For the Record</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Second Column - Community -->
+                        <div class="footer-column">
+                            <h3>Communities</h3>
+                            <ul>
+                                <li><a href="https://artists.spotify.com/home">For Artists</a></li>
+                                <li><a href="https://developer.spotify.com/">Developers</a></li>
+                                <li><a href="https://ads.spotify.com/en-IN/">Advertising</a></li>
+                                <li><a href="https://investors.spotify.com/home/default.aspx">Investors</a></li>
+                                <li><a href="https://spotifyforvendors.com/">Vendors</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Third Column - Help -->
+                        <div class="footer-column third">
+                            <h3>Useful links</h3>
+                            <ul>
+                                <li><a href="https://support.spotify.com/in-en/">Support </a></li>
+                                <li><a href="https://www.spotify.com/in-en/download/windows/">Free Mobile</a></li>
+                                <li><a href="#">App</a></li>
+
+                            </ul>
+                        </div>
+
+                        <!-- Fourth Column - Legal -->
+                        <div class="footer-column">
+                            <h3>Spotify Plans</h3>
+                            <ul>
+                                <li><a
+                                        href="https://www.spotify.com/in-en/premium/#ref=spotifycom_footer_premium_individual">Premium
+                                        Indiviual</a></li>
+                                <li><a href="https://www.spotify.com/in-en/duo/#ref=spotifycom_footer_premium_duo">Premium
+                                        Duo</a></li>
+                                <li><a
+                                        href="https://www.spotify.com/in-en/family/#ref=spotifycom_footer_premium_family">Premium
+                                        Family</a></li>
+                                <li><a
+                                        href="https://www.spotify.com/in-en/student/#ref=spotifycom_footer_premium_student">Premium
+                                        Student</a></li>
+                                <li><a href="https://www.spotify.com/in-en/free/#ref=spotifycom_footer_free">Spotify
+                                        Free</a></li>
+
+                            </ul>
+                        </div>
+                        <!-- icons -->
+                        <div class="icon flex justify-content align-items">
+                            <div class="insta iconcircle flex justify-content align-items">
+                                <a href="https://www.instagram.com/_ayush_765/"><i class="fa-brands fa-instagram"
+                                        style="color: #ffffff;"></i></a>
+                            </div>
+                            <div class="twitter iconcircle flex justify-content align-items">
+                                <a href="https://x.com/spotify"><i class="fa-brands fa-twitter"
+                                        style="color: #ffffff;"></i></a>
+                            </div>
+                            <div class="facebook iconcircle flex justify-content align-items">
+                                <a href="https://www.facebook.com/Spotify"><i class="fa-brands fa-facebook"
+                                        style="color: #ffffff;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="line"></div>
+                <div class="links flex ">
+                    <a href="">Legal</a>
+                    <a href="">Safety & Privacy Center</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Cookies</a>
+                    <a href="">About Ads</a>
+                    <a href="">Accessibility</a>
+                    <div class="signature">
+                        <p>@ayush 11-05-2025</p>
+                    </div>
+                </div>
+
+            </footer>
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="playbar">
+
+        <div class="function1 flex justify-content align-items">
+            <div class="playbarinfo">
+                <div class="songinfoplaybar"></div>
+                <div class="songartistplaybar"></div>
+
+            </div>
+            <div class="function flex justify-content align-items">
+                <img id="shuffle" src="images/shuffle.svg" alt="">
+                <img id="previous" src="images/back.svg" alt="">
+                <div class="circle flex justify-content align-items">
+                    <img id="play" src="images/play-solid.svg" alt="">
+                </div>
+                <img id="next" src="images/forward.svg" alt="">
+                <img id="repeat" src="images/repeat.svg" alt="">
+            </div>
+        </div>
+
+        <div class="seekbar flex justify-content align-items">
+            <div class="songtimer"></div>
+            <div class="circle2"></div>
+            <div class="songtime"></div>
+        </div>
+
+        <div class="volume flex justify-content align-items">
+            <img src="images/volume.svg" alt="">
+            <div class="range">
+                <input type="range" name="volume" value="100">
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <script type="module" src="logic.js"></script>
+</body>
+
+</html>

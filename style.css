@@ -1,0 +1,1150 @@
+@font-face {
+    font-family: 'SpotifyMix';
+    src: url('SpotifyMix-Medium.ttf') format('truetype');
+    /* or 'opentype', 'woff', etc */
+}
+
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-content {
+    justify-content: center;
+}
+
+.align-items {
+    align-items: center;
+}
+
+.left-box {
+    width: 28vw;
+    background-color: #121212;
+    height: 78vh;
+    margin-right: 8px;
+    border-radius: 7px;
+}
+
+.right-box {
+    width: 72vw;
+    height: 78vh;
+    background-color: #121212;
+    border-radius: 7px;
+    overflow-y: auto;
+    transition: opacity 0.3s ease;
+}
+
+.home {
+    background-color: #121212;
+    height: 47px;
+    width: 47px;
+    border-radius: 39px;
+    margin-top: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    transform: translateX(387px);
+}
+
+.home:hover {
+    background-color: #282828;
+}
+
+.home img {
+    padding-top: 8px;
+    padding-left: 10.5px;
+    height: 27px;
+}
+
+.logo {
+    height: 35px;
+    padding-right: 42px;
+    padding-left: 19px;
+    padding-top: 6px;
+}
+
+
+.searchsvg {
+    margin-left: 16px;
+    margin-top: 9px;
+    margin-right: 10px;
+    height: 27px;
+    transform: translateX(404px);
+    z-index: 10;
+}
+
+.search-input {
+    padding-left: 10px;
+    border-radius: 200px;
+    border: 2px solid #1f1f1f;
+    margin-left: 355px;
+    width: 403px;
+    background-color: #1f1f1f;
+    padding-left: 46px;
+    height: 42px;
+}
+
+.search-input::placeholder {
+    font-size: 16px;
+    /* Increase size */
+    font-weight: 520;
+    /* Make it bolder (can use 600 or 700 if you want more weight) */
+    color: #b3b3b3;
+    font-family: 'SpotifyMix';
+    font-weight: 400;
+    color: white;
+    /* Optional: make the color lighter or custom */
+}
+
+.nav-links {
+    padding-left: 314px;
+    padding-top: 10px;
+    text-decoration: none;
+    color: white;
+    gap: 20px;
+}
+
+.line {
+    background: #fff;
+    height: 25px;
+    margin-left: 21px;
+    margin-top: 8px;
+    width: 1px;
+
+}
+
+.nav-links2 {
+    padding-left: 49px;
+    padding-top: 10px;
+    gap: 40px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(179, 179, 179);
+    font-weight: bold;
+    font-family: 'SpotifyMix';
+    font-weight: 400;
+}
+
+.nav-links :hover {
+    color: white;
+}
+
+.nav-links2 a {
+    text-decoration: none;
+    color: rgb(179, 179, 179);
+    font-weight: bold;
+    font-family: 'SpotifyMix';
+    font-weight: 400;
+}
+
+.nav-links2 :hover {
+    color: white;
+}
+
+.login-btn {
+    width: 99px;
+    height: 44px;
+    background-color: white;
+    margin-left: 15px;
+    margin-top: 1px;
+    border-radius: 62px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.login-btn:hover {
+    font-weight: bold;
+    font-size: 17px;
+
+
+}
+
+.plus {
+    height: 16px;
+    padding-left: 2px;
+    padding-right: 16px;
+    padding-top: 23px;
+}
+
+.container {
+    margin-top: 10px;
+}
+
+.heading {
+    justify-content: space-between;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+
+.heading h2 {
+    font-size: 16px;
+
+    font-family: 'SpotifyMix';
+    font-weight: 700;
+    padding: 7px;
+}
+
+/* .playlist {
+    background-color: #1f1f1f;
+    border-radius: 7px;
+    width: 400px;
+    margin-left: 9px;
+    height: 137px;
+    margin-top: 21px;
+} */
+
+.star h2 {
+    font-size: 16px;
+    font-family: 'SpotifyMix';
+    font-weight: 700;
+    padding: 17px 2px 2px 20px
+}
+
+.star h3 {
+    font-size: 14px;
+    font-family: 'SpotifyMix';
+    font-weight: 400;
+    padding: 0px 2px 2px 20px
+}
+
+.star button {
+    width: 131px;
+    height: 33px;
+    background-color: white;
+    margin-left: 15px;
+    margin-top: 1px;
+    border-radius: 62px;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.podcast {
+    background-color: #1f1f1f;
+    border-radius: 7px;
+    width: 400px;
+    margin-left: 9px;
+    height: 137px;
+    margin-top: 21px;
+}
+
+.custom-btn {
+    font-weight: 700 !important;
+    font-family: 'spotifyMix';
+    font-size: 14px !important;
+}
+
+.left-footer {
+    padding: 32px 32px 2px 22px;
+}
+
+.left-footer a {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 400;
+    font-family: "spotifyMix";
+    margin-right: 15px;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.lang {
+    padding-left: 19px;
+    padding-top: 6px;
+    color: white;
+
+}
+
+.lang button {
+    background-color: #121212;
+    width: 105px;
+    height: 35px;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    font-family: 'spotifyMix';
+    font-size: 14px;
+    font-weight: 700;
+
+}
+
+.lang img {
+    height: 19px;
+    padding-right: 6px;
+}
+
+.head {
+    font-family: 'SpotifyMix';
+    font-size: 24px;
+    font-weight: 700;
+    padding: 6px 2px 2px 23px;
+}
+
+.card-container {
+    display: flex;
+    gap: 2px;
+    padding-left: 17px;
+}
+
+.card {
+    padding: 7px 4px 7px 4px;
+    border-radius: 8px;
+}
+
+.card img {
+    height: 151px;
+    width: 151px;
+    object-fit: cover;
+    margin: 6px 0px 0px 8px;
+    border-radius: 6px;
+}
+
+.card h2 {
+    font-family: 'SpotifyMix';
+    font-size: 16px;
+    font-weight: 400;
+    margin: 6px 0px 0px 8px;
+
+}
+
+.card p {
+    font-family: 'SpotifyMix';
+    font-size: 13px;
+    font-weight: 400;
+    margin: 6px 0px 0px 8px;
+    color: rgb(179, 179, 179);
+}
+
+.card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/*scrollbar  */
+
+/* Style for scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #333;
+    /* Dark thumb */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Darker thumb when hovered */
+}
+
+::-webkit-scrollbar-track {
+    background: #222;
+    /* Dark track */
+    border-radius: 10px;
+}
+
+
+
+.function img {
+
+    height: 44px;
+    width: 17px;
+}
+
+.function {
+    gap: 28px;
+    margin-top: 19px;
+}
+
+.circle {
+    background-color: white;
+    height: 32px;
+    width: 32px;
+    border-radius: 19px;
+    cursor: pointer;
+
+}
+
+.circle img {
+    height: 16px;
+    width: 17px;
+}
+
+.leftsongs {
+    position: relative;
+    height: 45vh;
+    background-color: #121212;
+    overflow-y: auto;
+}
+
+.filters button {
+    background-color: #1f1f1f;
+    border: 2px solid #1f1f1f;
+    color: white;
+    font-family: 'SpotifyMix';
+    border-radius: 25px;
+    height: 35px;
+    margin-left: 15px;
+    width: 73px;
+}
+
+.playlistcard img {
+    height: 50px;
+    width: 50px;
+    border-radius: 4px;
+}
+
+.playlistcard {
+    font-family: 'SpotifyMix';
+    padding: 8px 2px 8px 16px;
+    border-radius: 13px;
+}
+
+.playlistcard:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.playlistsonginfo h2 {
+    font-size: 16px;
+    margin: 2px 2px 2px 15px;
+    font-weight: 400;
+}
+
+.playlistsonginfo span {
+    font-size: 13px;
+    font-weight: 100;
+    margin-left: 16px;
+}
+
+.artist {
+    font-family: 'SpotifyMix';
+    padding: 17px 2px 2px 15px;
+}
+
+.artist img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+.leftplaylists {
+    height: 64.5vh;
+    overflow-y: auto;
+    overflow-y: scroll;
+    margin-top: 5px;
+}
+
+.songs-list {
+    padding: 20px;
+    color: white;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.song-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.song-item.playing {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.song-item.playing .song-name {
+    color: #1db954;
+}
+
+.song-number {
+    width: 40px;
+    text-align: center;
+    color: #b3b3b3;
+}
+
+.song-info {
+    flex-grow: 1;
+    margin-left: 16px;
+}
+
+.song-name {
+    font-size: 16px;
+    color: #fff;
+    font-family: 'SpotifyMix';
+    transition: color 0.2s;
+    margin-bottom: 4px;
+}
+
+.song-artist {
+    font-size: 14px;
+    color: #b3b3b3;
+    font-family: 'SpotifyMix';
+}
+
+.song-duration {
+    margin-left: 16px;
+}
+
+.play-btn {
+    background: transparent;
+    border: none;
+    color: #b3b3b3;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-family: 'SpotifyMix';
+}
+
+.play-btn:hover {
+    color: #fff;
+}
+
+.loading {
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.error {
+    color: #ff5555;
+    text-align: center;
+    padding: 20px;
+    font-family: 'SpotifyMix';
+}
+
+.seekbar {
+    height: 4px;
+    width: 535px;
+    border-radius: 13px;
+    background-color: #535353;
+    position: relative;
+    left: 33%;
+    margin-top: 0.7%;
+    cursor: pointer;
+}
+
+.seekbar:hover {
+    background-color: #535353;
+}
+
+.circle2 {
+    height: 12px;
+    width: 12px;
+    background-color: white;
+    border-radius: 12px;
+    position: relative;
+    left: -51%;
+    /* margin-top: -4px; */
+}
+
+.function img {
+    cursor: pointer;
+}
+
+.songinfoplaybar {
+    color: white;
+    font-family: 'SpotifyMix';
+
+}
+
+.songartistplaybar {
+    color: white;
+    font-family: 'SpotifyMix';
+}
+
+/* Hide scrollbar but keep functionality */
+.leftplaylists::-webkit-scrollbar {
+    width: 8px;
+}
+
+.leftplaylists::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.leftplaylists::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.library {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.player-info {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.songinfoplaybar {
+    color: white;
+    font-size: 14px;
+    font-family: 'SpotifyMix';
+    margin-bottom: 4px;
+}
+
+.songartistplaybar {
+    color: #b3b3b3;
+    font-size: 12px;
+    font-family: 'SpotifyMix';
+}
+
+.playbarinfo {
+    /* padding-top: 17px;
+    transform: translateX(-591px); */
+    padding-top: 17px;
+    /* Remove the transform and use positioning instead */
+    position: absolute;
+    left: 20px;
+    width: 200px;
+    /* Give it a fixed width */
+    overflow: hidden;
+    /* Prevent text overflow */
+    text-overflow: ellipsis;/
+}
+
+.navcircle {
+    border: 2px solid white;
+    height: 17px;
+    width: 17px;
+    border-radius: 17px;
+    transform: translateX(16px);
+    margin-top: 2px;
+    margin-right: 4px;
+}
+
+.navcircle img {
+    height: 16px;
+}
+
+.songtime {
+    transform: translateX(274px);
+    padding-bottom: 4px;
+    color: white;
+    font-size: 13px;
+    font-family: 'SpotifyMix';
+    padding-top: 3.5px;
+    /* position: absolute;
+    left: 548px; */
+}
+
+.songtimer {
+    transform: translateX(-280px);
+    padding-bottom: 4px;
+    color: white;
+    font-size: 13px;
+    font-family: 'SpotifyMix';
+    padding-top: 3.5px;
+    /* position: absolute;
+    left: -55px; */
+}
+
+.card-container {
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+#previous {
+    cursor: pointer;
+}
+
+.volume {
+    position: absolute;
+    bottom: 35px;
+    right: 1.5%;
+}
+
+.volume-bar {
+    width: 125px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 7px;
+}
+
+.volume-circle {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+}
+
+.volume-bar:hover {
+    cursor: pointer;
+    background-color: #1db954;
+}
+
+.volume img {
+    height: 24px;
+    width: 19px;
+    padding-top: 7px;
+}
+
+.volume input {
+    height: 4px;
+    color: #1db954;
+}
+
+
+.volume input {
+    width: 100px;
+    height: 4px;
+    -webkit-appearance: none;
+    background: #535353;
+    border-radius: 2px;
+    outline: none;
+    margin-top: 0;
+}
+
+.volume input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -4px;
+}
+
+.volume input::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #1db954 0%, #1db954 var(--range-progress, 50%), #535353 var(--range-progress, 50%), #535353 100%);
+    height: 4px;
+    border-radius: 2px;
+}
+
+.volume input::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    margin-top: -4px;
+}
+
+.volume input::-moz-range-track {
+    background: #535353;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.volume input::-moz-range-progress {
+    background: #1db954;
+    height: 4px;
+    border-radius: 2px;
+}
+
+/* Add these new styles for the seek bar progress */
+.seekbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--seek-progress, 0%);
+    background-color: #1db954;
+    border-radius: 13px;
+    pointer-events: none;
+}
+
+.circle3 {
+    height: 49px;
+    width: 49px;
+    background-color: #1db954
+        /* border-radius : 20px; */
+    ;
+    border-radius: 50%;
+}
+
+.circle3 img {
+    height: 26px;
+    width: 19px;
+    margin-left: 17px;
+    margin-top: 10px;
+}
+
+.play-btn {
+    position: relative;
+    background: transparent;
+    border: none;
+    color: #b3b3b3;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-family: 'SpotifyMix';
+    margin-top: -66px;
+    z-index: 10;
+    padding-left: -27px;
+    margin-left: 86px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: scale(0.9);
+}
+
+.card:hover .play-btn {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.song-number {
+    font-family: 'SpotifyMix';
+    font-size: 14px;
+}
+
+.last {
+    margin-bottom: 35px;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.card {
+    cursor: pointer;
+    ;
+}
+
+
+.main-footer {
+    background-color: #121212;
+    color: #b3b3b3;
+    padding: 48px 0 24px;
+    font-family: 'Circular', Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'SpotifyMix';
+    /* margin-right: 167px; */
+}
+
+.footer-column {
+    width: 212px;
+    margin-bottom: 30px;
+}
+
+.footer-column h3 {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 4px;
+}
+
+.footer-column ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #1DB954;
+    text-decoration: none;
+}
+
+.icon{
+    gap: 36px;
+    margin-bottom: 152px;
+}
+
+.iconcircle{
+    background-color: #282828;
+    height: 32px;
+    width :32px;
+    border-radius: 45px;
+}
+
+.iconcircle:hover{
+    background-color: #333;
+}
+
+.line{
+    background-color: white;
+    height: 0.5px;
+    width: 67vw;
+    margin-left: 26px;
+
+}
+
+.links a{
+    color: #b3b3b3;
+    text-decoration: none;
+    font-family: 'SpotifyMix';
+    font-size: 14px;
+}
+
+.links{
+    margin-left: 27px;
+    gap: 43px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.links a:hover{
+    color: #1db954;
+}
+.signature p{
+    font-size: 16px;
+    font-family: 'SpotifyMix';
+    padding-bottom: 36px;
+    margin-left: 132px;
+    margin-top: -5px;
+
+}
+
+
+
+
+
+/* ......................................................... */
+@media (max-width: 600px) {
+    .logo {
+        height: 30px;
+        padding-right: 16px;
+        padding-left: 5px;
+        padding-top: 6px;
+    }
+
+    .home img {
+        padding-top: 8px;
+        padding-left: 10.5px;
+        margin-right: 44px;
+        height: 25px;
+        transform: translateX(-2px);
+    }
+
+    .home {
+        height: 41px;
+        width: 41px;
+        transform: translatex(0px);
+    }
+
+    .search-input {
+        width: 178px;
+        margin-left: -40px;
+        height: 37px;
+    }
+
+    .searchsvg {
+        transform: translateX(10px);
+    }
+
+    .search-input::placeholder {
+        font-size: 12px;
+        /* Increase size */
+        font-weight: 520;
+        /* Make it bolder (can use 600 or 700 if you want more weight) */
+        color: #b3b3b3;
+        font-family: 'SpotifyMix';
+        font-weight: 400;
+        color: white;
+        /* Optional: make the color lighter or custom */
+    }
+
+    .nav-links {
+        position: fixed;
+        width: 2px;
+        height: 2px;
+    }
+
+    .nav-links a {
+        margin-top: -5px;
+        font-size: 12px;
+    }
+
+    .seekbar {
+        height: 4px;
+        width: 247px;
+        margin-left: -54px;
+    }
+
+    .seekbar:hover {
+        background-color: #1db954;
+    }
+
+    .playbar {
+        margin-top: 42px;
+        margin-left: 8px;
+
+    }
+
+    .songtime {
+        transform: translateX(127px);
+        font-size: 12px;
+        padding-top: 1.5px;
+    }
+
+    .singtimer {
+        transform: translateX(-131px);
+        font-size: 12px;
+        padding-top: 1.5px;
+    }
+
+    .left-box {
+        position: absolute;
+        left: -275px;
+        z-index: 1;
+        width: 245px;
+        margin-top: 8px;
+        height: 78vh;
+        transition: left 0.3s ease;
+    }
+
+    .right-box {
+        width: 100vw;
+        margin-top: 8px;
+        height: 78vh;
+    }
+
+    .leftplaylists {
+        height: 69.5vh;
+    }
+
+    .songtimer {
+        transform: translateX(-129px);
+        font-size: 12px;
+        padding-top: 1.5px;
+    }
+
+    .function {
+        transform: translateX(-3px);
+    }
+
+    .navcircle {
+        margin-right: 23px;
+    }
+
+    .extra {
+        transform: translateX(20px);
+    }
+
+    .playbarinfo {
+        margin-bottom: 100px;
+        left: 115px;
+    }
+
+    .songinfoplaybar {
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .songartistplaybar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .filters button {
+        height: 30px;
+        margin-left: 15px;
+        width: 58px;
+        font-size: 12px;
+    }
+
+    .head {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .volume {
+        left: -600px;
+    }
+
+    .third{
+            margin-left: 39px;
+    }
+
+    .footer-column {
+    width: 65px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    color: #fff;
+    font-size: 12px;
+}
+
+.footer-column ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-container{
+    margin-left: 16px;
+}
+
+.icon {
+    gap: 19px;
+    margin-bottom: 9px;
+}
+.line {
+    background-color: white;
+    height: 0.5px;
+    width: 84vw;
+    margin-left: 23px;
+}
+
+.links a{
+    font-size: 13px;
+}
+
+
+.links {
+    margin-left: 27px;
+    gap: 13px;
+    margin-top: 40px;
+}
+
+.signature p {
+    
+    font-size: 14px;
+    padding-bottom: 36px;
+    margin-left: -105px;
+    margin-top: 70px;
+}
+
+}
