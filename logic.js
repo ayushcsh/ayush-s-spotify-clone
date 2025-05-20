@@ -651,6 +651,12 @@ document.querySelector(".hamburger").addEventListener("click", () => {
         leftbox.style.left = "-300px";
     }
 
+    document.querySelector(".right-box").addEventListener("click" , () =>{
+        if(isopen){
+            leftbox.style.left = "-300px";
+        }
+    })
+
     isopen = !isopen;
 
 })
